@@ -1,0 +1,61 @@
+---
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+---
+
+<Layout>
+  <Header />
+
+  <main>
+    <section id="hero">
+
+    <div class="hero-left">
+
+        <span class="hero-tag">
+            TECHNICAL DOCUMENTATION
+        </span>
+
+        <h1>
+            Creating precise
+            <br />
+            ArchiCAD documentation
+            <br />
+            for Interior Design.
+        </h1>
+
+        <p>
+
+            Construction & Civil Engineering graduate specialized in BIM
+            modeling, furniture detailing and technical documentation for
+            residential and commercial interior projects.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="btn-dark">
+                View Projects
+            </a>
+
+            <a href="/cv.pdf" class="btn-light">
+                Download CV
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <img src="/profile.jpg" alt="Pavlo Hlukhov" />
+
+    </div>
+
+</section>
+<Projects />
+<About />
+  </main>
+
+</Layout>
