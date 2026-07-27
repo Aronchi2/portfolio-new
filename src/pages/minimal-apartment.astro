@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectPage from "../components/ProjectPage.astro";
+
+const project = {
+  category: "Residential Interior",
+
+  title: "Apartment",
+
+  description:
+    "Technical documentation and BIM model developed in ArchiCAD for a contemporary apartment interior.",
+
+  cover: "/projects/apartment/cover.jpg",
+
+  docsClass: "five-docs",
+
+  gallery: [
+    {
+      src: "/projects/apartment/living.jpg",
+      alt: "Living Room",
+    },
+    {
+      src: "/projects/apartment/kitchen.jpg",
+      alt: "Kitchen",
+    },
+    {
+      src: "/projects/apartment/bedroom.jpg",
+      alt: "Bedroom",
+    },
+  ],
+
+  featuredDrawing: {
+    number: "01",
+
+    title: "Furniture Layout",
+
+    description:
+      "Furniture layout coordinated with the BIM model.",
+
+    image: "/projects/apartment/documentation/furniture-layout.jpg",
+  },
+
+  documentation: [
+    {
+      src: "/projects/apartment/documentation/lighting-plan.jpg",
+      title: "Lighting Plan",
+    },
+    {
+      src: "/projects/apartment/documentation/electrical-plan.jpg",
+      title: "Electrical Plan",
+    },
+    {
+      src: "/projects/apartment/documentation/ceiling-plan.jpg",
+      title: "Ceiling Plan",
+    },
+    {
+      src: "/projects/apartment/documentation/bathroom-elevation.jpg",
+      title: "Bathroom Elevation",
+    },
+    {
+      src: "/projects/apartment/documentation/axonometry.jpg",
+      title: "Furniture Axonometry",
+    },
+  ],
+
+  nextProject: {
+    title: "Dental Clinic",
+    href: "/dental-clinic",
+  },
+};
+---
+
+<Layout
+  title="Apartment | ArchiCAD Technical Documentation"
+  description="Technical drawings and BIM documentation for a modern apartment interior created in ArchiCAD."
+>
+  <Header />
+  <ProjectPage project={project} />
+</Layout>

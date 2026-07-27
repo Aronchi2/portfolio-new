@@ -1,134 +1,91 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import ProjectPage from "../components/ProjectPage.astro";
+
+const project = {
+  category: "Residential Interior",
+
+  title: "House Interior",
+
+  description:
+    "A modern residential interior developed in ArchiCAD with complete BIM modelling and technical documentation for construction.",
+
+  cover: "/projects/house/cover.jpg",
+
+  docsClass: "five-docs",
+
+  gallery: [
+    {
+      src: "/projects/house/living.jpg",
+      alt: "Living Room",
+    },
+    {
+      src: "/projects/house/dining.jpg",
+      alt: "Dining Room",
+    },
+    {
+      src: "/projects/house/kitchen.jpg",
+      alt: "Kitchen",
+    },
+    {
+      src: "/projects/house/bedroom.jpg",
+      alt: "Bedroom",
+    },
+    {
+      src: "/projects/house/bathroom.jpg",
+      alt: "Bathroom",
+    },
+  ],
+
+  featuredDrawing: {
+    number: "01",
+
+    title: "Furniture Layout",
+
+    description:
+      "Furniture placement and dimensions coordinated with the BIM model.",
+
+    image: "/projects/house/documentation/furniture-layout.jpg",
+  },
+
+  documentation: [
+    {
+      src: "/projects/house/documentation/lighting-plan.jpg",
+      title: "Lighting Plan",
+    },
+    {
+      src: "/projects/house/documentation/ceiling-plan.jpg",
+      title: "Ceiling Plan",
+    },
+    {
+      src: "/projects/house/documentation/electrical-plan.jpg",
+      title: "Electrical Plan",
+    },
+    {
+      src: "/projects/house/documentation/bathroom-elevation.jpg",
+      title: "Bathroom Elevation",
+    },
+    {
+      src: "/projects/house/documentation/axonometry.jpg",
+      title: "Furniture Axonometry",
+    },
+  ],
+
+  nextProject: {
+    title: "Minimal Apartment",
+    href: "/minimal-apartment",
+  },
+};
 ---
 
-<Layout>
+<Layout
+  title="House Interior | ArchiCAD Technical Documentation"
+  description="Technical drawings, BIM model and complete ArchiCAD documentation for a modern house interior project."
+>
 
-    <Header />
+  <Header />
 
-    <main class="project-page">
-
-        <section class="project-hero">
-
-            <img
-                src="/projects/house/cover.jpg"
-                alt="House Interior"
-            />
-
-        </section>
-
-        <section class="project-info">
-
-            <p>Residential Interior</p>
-
-            <h1>House Interior</h1>
-
-            <p>
-                Technical documentation and BIM model developed in ArchiCAD
-                for a modern 218 m² private residence.
-            </p>
-
-        </section>
-
-        <section class="gallery">
-
-            <img src="/projects/house/living.jpg" alt="Living Room" />
-            <img src="/projects/house/dining.jpg" alt="Dining Room" />
-            <img src="/projects/house/kitchen.jpg" alt="Kitchen" />
-            <img src="/projects/house/bedroom.jpg" alt="Bedroom" />
-            <img src="/projects/house/bathroom.jpg" alt="Bathroom" />
-
-        </section>
-
-        <section class="documentation">
-
-            <p class="section-label">Technical Documentation</p>
-
-            <h2>Documentation Highlights</h2>
-
-            <p class="section-description">
-                Selected drawings from the complete ArchiCAD documentation package prepared for project implementation.
-            </p>
-
-            <div class="drawing">
-
-                <div class="drawing-info">
-
-                    <p>01</p>
-
-                    <h3>Furniture Layout</h3>
-
-                    <span>
-                        Furniture placement and dimensions coordinated with the BIM model.
-                    </span>
-
-                </div>
-
-                <div class="drawing-image">
-
-                    <img
-                        src="/projects/house/documentation/furniture-layout.jpg"
-                        alt="Furniture Layout"
-                    />
-
-                </div>
-
-            </div>
-
-            <h2 class="gallery-title">Documentation Gallery</h2>
-
-            <div class="docs-grid">
-
-                <!-- 1 -->
-                <div class="doc-card">
-                    <img
-                        src="/projects/house/documentation/lighting-plan.jpg"
-                        alt="Lighting Plan"
-                    />
-                    <h3>Lighting Plan</h3>
-                </div>
-
-                <!-- 2 -->
-                <div class="doc-card">
-                    <img
-                        src="/projects/house/documentation/ceiling-plan.jpg"
-                        alt="Ceiling Plan"
-                    />
-                    <h3>Ceiling Plan</h3>
-                </div>
-
-                <!-- 3 -->
-                <div class="doc-card">
-                    <img
-                        src="/projects/house/documentation/electrical-plan.jpg"
-                        alt="Electrical Plan"
-                    />
-                    <h3>Electrical Plan</h3>
-                </div>
-
-                <!-- 4 -->
-                <div class="doc-card">
-                    <img
-                        src="/projects/house/documentation/bathroom-elevation.jpg"
-                        alt="Bathroom Elevation"
-                    />
-                    <h3>Bathroom Elevation</h3>
-                </div>
-
-                <!-- 5 -->
-                <div class="doc-card">
-                    <img
-                        src="/projects/house/documentation/axonometry.jpg"
-                        alt="Furniture Axonometry"
-                    />
-                    <h3>Furniture Axonometry</h3>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
+  <ProjectPage project={project} />
 
 </Layout>

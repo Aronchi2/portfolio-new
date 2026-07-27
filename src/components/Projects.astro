@@ -1,29 +1,81 @@
-<section id="projects" class="projects">
+---
+const projects = [
+  {
+    number: "01",
+    title: "House Interior",
+    description: "Residential Interior",
+    details: "218 m² • ArchiCAD • BIM Documentation",
+    image: "/projects/house/cover.jpg",
+    href: "/house-interior",
+  },
+  {
+    number: "02",
+    title: "Apartment",
+    description: "Residential Interior",
+    details: "69 m² • ArchiCAD • Working Drawings",
+    image: "/projects/apartment/cover.jpg",
+    href: "/minimal-apartment",
+  },
+  {
+    number: "03",
+    title: "Dental Clinic",
+    description: "Commercial Interior",
+    details: "118 m² • BIM • Technical Drawings",
+    image: "/projects/dental/cover.jpg",
+    href: "/dental-clinic",
+  },
+];
+---
 
-    <div class="projects-header">
-        <p>SELECTED PROJECTS</p>
-        <h2>Technical Documentation Portfolio</h2>
-    </div>
+<section id="projects" class="projects reveal">
 
-    <div class="project-card">
+  <div class="projects-header">
+
+    <p>SELECTED PROJECTS</p>
+
+    <h2>Technical Documentation Portfolio</h2>
+
+  </div>
+
+  {
+    projects.map((project) => (
+
+      <div class="project-card">
 
         <div class="project-image">
-            <img src="/projects/house/cover.jpg" alt="House Interior" />
+
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+          />
+
         </div>
 
         <div class="project-info">
-            <span>01</span>
 
-            <h3>House Interior</h3>
+          <span>{project.number}</span>
 
-            <p>Residential Interior • 218 m²</p>
+          <h3>{project.title}</h3>
 
-          <a href="/house-interior" class="project-link">
-View Project →
-</a>
+          <p>
+            {project.description}
+            <br />
+            {project.details}
+          </p>
+
+          <a
+            href={project.href}
+            class="project-link"
+          >
+            View Project →
+          </a>
+
         </div>
 
-    </div>
+      </div>
 
+    ))
+  }
 
 </section>

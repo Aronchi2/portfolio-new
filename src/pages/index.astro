@@ -1,61 +1,78 @@
 ---
-import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+
+import Projects from "../components/Projects.astro";
+import About from "../components/About.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout>
-  <Header />
+<Layout
+    title="Pavlo Hlukhov | Technical Documentation Specialist"
+    description="Portfolio of ArchiCAD technical drawings, BIM modelling and working documentation for interior design projects."
+>
 
-  <main>
-    <section id="hero">
+    <Header />
 
-    <div class="hero-left">
+    <main>
 
-        <span class="hero-tag">
-            TECHNICAL DOCUMENTATION
-        </span>
+        <section id="hero" class="reveal">
 
-        <h1>
-            Creating precise
-            <br />
-            ArchiCAD documentation
-            <br />
-            for Interior Design.
-        </h1>
+            <div class="hero-left">
 
-        <p>
+                <span class="hero-tag">
+                    ARCHICAD • TECHNICAL DRAWINGS • BIM
+                </span>
 
-            Construction & Civil Engineering graduate specialized in BIM
-            modeling, furniture detailing and technical documentation for
-            residential and commercial interior projects.
+                <h1>
+                    Technical Drawings
+                    <br />
+                    for Interior
+                    <br />
+                    Design
+                </h1>
 
-        </p>
+                <p>
+                    I develop complete technical documentation for interior design
+                    projects, transforming approved concepts into coordinated
+                    ArchiCAD working drawings for accurate construction and
+                    implementation.
+                </p>
 
-        <div class="hero-buttons">
+                <div class="hero-buttons">
 
-            <a href="#projects" class="btn-dark">
-                View Projects
-            </a>
+                    <a href="#projects" class="btn-dark">
+                        View Projects
+                    </a>
 
-            <a href="/cv.pdf" class="btn-light">
-                Download CV
-            </a>
+                    <a href="/cv.pdf" class="btn-light">
+                        Download CV
+                    </a>
 
-        </div>
+                </div>
 
-    </div>
+            </div>
 
-    <div class="hero-right">
+            <div class="hero-right">
 
-        <img src="/profile.jpg" alt="Pavlo Hlukhov" />
+                <img
+                    src="/profile.jpg"
+                    alt="Pavlo Hlukhov"
+                />
 
-    </div>
+            </div>
 
-</section>
-<Projects />
-<About />
-  </main>
+        </section>
+
+        <Projects />
+
+        <About />
+
+        <Contact />
+
+        <Footer />
+
+    </main>
 
 </Layout>

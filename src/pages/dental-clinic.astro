@@ -1,0 +1,79 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import ProjectPage from "../components/ProjectPage.astro";
+
+const project = {
+  category: "Commercial Interior",
+
+  title: "Dental Clinic",
+
+  description:
+    "Contemporary dental clinic designed and documented in ArchiCAD, including BIM modeling, complete technical documentation and custom furniture detailing.",
+
+  cover: "/projects/dental/cover.jpg",
+
+  docsClass: "four-docs",
+
+  gallery: [
+    {
+      src: "/projects/dental/reception.jpg",
+      alt: "Reception",
+    },
+    {
+      src: "/projects/dental/treatment-room.jpg",
+      alt: "Treatment Room",
+    },
+    {
+      src: "/projects/dental/bathroom.jpg",
+      alt: "Bathroom",
+    },
+  ],
+
+  featuredDrawing: {
+    number: "01",
+
+    title: "Furniture Layout",
+
+    description:
+      "Furniture layout coordinated with the BIM model and medical equipment requirements.",
+
+    image: "/projects/dental/documentation/furniture-layout.jpg",
+  },
+
+  documentation: [
+    {
+      src: "/projects/dental/documentation/electrical-plan.jpg",
+      alt: "Electrical Plan",
+    },
+    {
+      src: "/projects/dental/documentation/lighting-plan.jpg",
+      alt: "Lighting Plan",
+    },
+    {
+      src: "/projects/dental/documentation/ceiling-plan.jpg",
+      alt: "Ceiling Plan",
+    },
+    {
+      src: "/projects/dental/documentation/bathroom-elevation.jpg",
+      alt: "Bathroom Elevation",
+    },
+  ],
+
+  nextProject: {
+    title: "House Interior",
+    href: "/house-interior",
+  },
+};
+---
+
+<Layout
+  title="Dental Clinic | ArchiCAD Technical Documentation"
+  description="Complete ArchiCAD technical documentation and BIM workflow for a dental clinic interior."
+>
+
+  <Header />
+
+  <ProjectPage project={project} />
+
+</Layout>
