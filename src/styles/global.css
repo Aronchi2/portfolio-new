@@ -899,122 +899,109 @@ nav a:hover{
 
     flex-wrap:wrap;
 
-}/* ---------- NEXT PROJECT BUTTON ---------- */
+}/* ===========================
+   PROJECT NAVIGATION
+=========================== */
 
-.next-arrow{
-
+.project-navigation{
     position:fixed;
-
-    right:40px;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    display:flex;
-
-    align-items:center;
-
-    gap:18px;
-
-    text-decoration:none;
-
+    inset:0;
+    pointer-events:none;
     z-index:1000;
-
 }
 
-.next-text{
+.project-arrow{
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
 
-    opacity:0;
+    pointer-events: auto;
+    text-decoration: none;
 
-    transform:translateX(15px);
+    color: rgba(17,17,17,.18);
 
-    transition:.35s;
+    font-size: 90px;
+    font-weight: 100;
+    font-family: Arial, sans-serif;
+    line-height: 1;
 
-    white-space:nowrap;
-
-    font-size:15px;
-
-    font-weight:500;
-
-    color:#222;
-
+    transition: .25s ease;
+    user-select: none;
 }
 
-.next-circle{
-
-    width:64px;
-
-    height:64px;
-
-    border-radius:50%;
-
-    border:1px solid #dcdcdc;
-
-    background:white;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:28px;
-
-    color:#222;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-    transition:.35s;
-
+.project-arrow:hover{
+    color: rgba(17,17,17,.55);
+    transform: translateY(-50%) scale(1.12);
 }
 
-.next-arrow:hover .next-circle{
-
-    background:#111;
-
-    color:white;
-
-    transform:scale(1.08);
-
+.project-arrow-left{
+    left: 28px;
 }
 
-.next-arrow:hover .next-text{
-
-    opacity:1;
-
-    transform:translateX(0);
-
+.project-arrow-right{
+    right: 28px;
 }
 
 @media (max-width:900px){
 
-    .next-arrow{
-
-        right:20px;
-
-        bottom:20px;
-
-        top:auto;
-
-        transform:none;
-
+    .project-arrow{
+        font-size:46px;
     }
 
-    .next-circle{
-
-        width:54px;
-
-        height:54px;
-
-        font-size:22px;
-
+    .project-arrow-left{
+        left:14px;
     }
 
-    .next-text{
-
-        display:none;
-
+    .project-arrow-right{
+        right:14px;
     }
+
+}/* ===========================
+   DOWNLOAD DOCUMENTATION
+=========================== */
+
+.download-documentation{
+    display:flex;
+    justify-content:center;
+    margin:80px 0 20px;
+}
+
+.download-btn{
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px 34px;
+
+    border:1px solid #ddd;
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#111;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:500;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.download-btn:hover{
+
+    background:#111;
+    color:#fff;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
 
 }

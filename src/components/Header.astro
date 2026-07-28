@@ -17,9 +17,19 @@ const isProjectPage = Astro.url.pathname !== "/";
         {
             isProjectPage ? (
 
-                <a href="/">
-                    ← Portfolio
-                </a>
+                <>
+                    <a href="/">
+                        ← Portfolio
+                    </a>
+
+                    <a
+                        href="/cv/Pavlo_Hlukhov_CV.pdf"
+                        target="_blank"
+                        download
+                    >
+                        CV
+                    </a>
+                </>
 
             ) : (
 
@@ -34,6 +44,14 @@ const isProjectPage = Astro.url.pathname !== "/";
 
                     <a href="#contact">
                         Contact
+                    </a>
+
+                    <a
+                        href="/cv/Pavlo_Hlukhov_CV.pdf"
+                        target="_blank"
+                        download
+                    >
+                        CV
                     </a>
                 </>
 

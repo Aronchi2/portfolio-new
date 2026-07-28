@@ -105,30 +105,45 @@ const { project } = Astro.props;
 
     </div>
 
+    {
+      project.fullDocumentation && (
+        <div class="download-documentation">
+          <a
+            href={project.fullDocumentation}
+            target="_blank"
+            class="download-btn"
+          >
+            Download Full Documentation
+          </a>
+        </div>
+      )
+    }
+
   </section>
 
-  
-   {
-  project.nextProject && (
+  {
+    project.previousProject && (
+      <a
+        href={project.previousProject.href}
+        class="project-arrow project-arrow-left"
+        aria-label={`Previous project: ${project.previousProject.title}`}
+      >
+        ‹
+      </a>
+    )
+  }
 
-    <a
-      href={project.nextProject.href}
-      class="next-arrow"
-      aria-label={`Next project: ${project.nextProject.title}`}
-    >
-
-      <span class="next-text">
-        {project.nextProject.title}
-      </span>
-
-      <span class="next-circle">
-        →
-      </span>
-
-    </a>
-
-  )
-}
+  {
+    project.nextProject && (
+      <a
+        href={project.nextProject.href}
+        class="project-arrow project-arrow-right"
+        aria-label={`Next project: ${project.nextProject.title}`}
+      >
+        ›
+      </a>
+    )
+  }
 
 </main>
 
