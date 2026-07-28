@@ -1044,4 +1044,23 @@ nav a:hover{
 
     box-shadow:0 15px 40px rgba(0,0,0,.12);
 
+}@media (max-width:1000px){
+
+    .docs-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .docs-grid.four-docs{
+        width:100%;
+    }
+
+    .docs-grid.four-docs .doc-card{
+        grid-column:auto !important;
+    }
+
+    .docs-grid.four-docs .doc-card img{
+        width:100%;
+    }
+
 }
