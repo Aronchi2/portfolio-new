@@ -647,13 +647,14 @@ nav a:hover{
         text-align:center;
     }
 
-    .projects,
-    .about,
-    .project-info,
-    .documentation{
-        margin:100px auto;
-        padding:0 24px;
-    }
+   .projects,
+.about,
+.project-info,
+.documentation,
+.contact{
+    margin:60px auto;
+    padding:0 24px;
+}
 
     .project-card,
     .about{
@@ -704,6 +705,26 @@ nav a:hover{
         padding:10px;
     }
 
+}.projects-header h2{
+    margin-bottom:50px;
+}
+
+.project-card{
+    margin-bottom:70px;
+}
+
+.stats{
+    margin-top:40px;
+}
+
+.contact h2{
+    font-size:42px;
+}
+
+.contact-text{
+    margin-bottom:35px;
+    font-size:18px;
+    line-height:1.7;
 }
 
 @media (max-width:600px){
@@ -741,6 +762,25 @@ nav a:hover{
         font-size:28px;
     }
 
+}#hero{
+    padding:90px 20px 30px;
+}
+
+.hero-left p{
+    margin:20px 0 30px;
+}
+
+.projects,
+.about,
+.project-info,
+.documentation,
+.contact{
+    margin:50px auto;
+}
+
+.footer{
+    margin-top:80px;
+    padding-top:50px;
 }
 
 /* ===========================
