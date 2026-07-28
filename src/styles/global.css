@@ -1079,4 +1079,55 @@ nav a:hover{
         width:100%;
     }
 
+}@media (max-width:768px){
+
+    /* CONTACT */
+
+    .contact{
+        padding:90px 24px;
+    }
+
+    .contact h2{
+        font-size:52px;
+        line-height:1.1;
+    }
+
+    .contact p{
+        font-size:20px;
+        line-height:1.7;
+    }
+
+    .contact .btn-dark{
+        margin-top:40px;
+        padding:16px 34px;
+        font-size:18px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+        padding:60px 24px 30px;
+    }
+
+    .footer-content{
+        gap:40px;
+    }
+
+    .footer h2{
+        font-size:46px;
+    }
+
+    .footer p{
+        font-size:20px;
+    }
+
+    .footer-links a{
+        font-size:20px;
+    }
+
+    .footer-bottom{
+        margin-top:50px;
+        font-size:16px;
+    }
+
 }
