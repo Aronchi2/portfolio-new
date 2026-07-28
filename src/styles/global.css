@@ -588,6 +588,22 @@ nav a:hover{
 
     .docs-grid{
         grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .docs-grid.four-docs,
+    .docs-grid.five-docs{
+        width:100%;
+    }
+
+    .docs-grid.four-docs .doc-card,
+    .docs-grid.five-docs .doc-card{
+        grid-column:auto !important;
+    }
+
+    .docs-grid.four-docs .doc-card img,
+    .docs-grid.five-docs .doc-card img{
+        width:100%;
     }
 
 }
